@@ -281,7 +281,7 @@ export class EmailAgent extends AIChatAgent<any> {
 		const systemPrompt = await getSystemPrompt(env, mailboxId);
 
 		const result = streamText({
-			model: workersai("@cf/moonshotai/kimi-k2.5"),
+			model: workersai("@cf/openai/gpt-oss-20b"),
 			system: systemPrompt,
 			messages: await convertToModelMessages(this.messages),
 			tools,
